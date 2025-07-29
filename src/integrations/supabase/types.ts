@@ -14,7 +14,213 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      pantry_items: {
+        Row: {
+          category: string
+          created_at: string
+          days_left: number
+          estimated_duration: number
+          id: string
+          last_purchased_at: string | null
+          name: string
+          price_per_unit: number | null
+          quantity: number
+          status: string
+          unit: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          days_left?: number
+          estimated_duration?: number
+          id?: string
+          last_purchased_at?: string | null
+          name: string
+          price_per_unit?: number | null
+          quantity?: number
+          status?: string
+          unit?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          days_left?: number
+          estimated_duration?: number
+          id?: string
+          last_purchased_at?: string | null
+          name?: string
+          price_per_unit?: number | null
+          quantity?: number
+          status?: string
+          unit?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      price_trends: {
+        Row: {
+          best_time_to_buy: string | null
+          change_percentage: number | null
+          created_at: string
+          current_price: number
+          id: string
+          item_name: string
+          prediction: string | null
+          previous_price: number | null
+          savings_potential: number | null
+          trend_direction: string
+          updated_at: string
+        }
+        Insert: {
+          best_time_to_buy?: string | null
+          change_percentage?: number | null
+          created_at?: string
+          current_price: number
+          id?: string
+          item_name: string
+          prediction?: string | null
+          previous_price?: number | null
+          savings_potential?: number | null
+          trend_direction: string
+          updated_at?: string
+        }
+        Update: {
+          best_time_to_buy?: string | null
+          change_percentage?: number | null
+          created_at?: string
+          current_price?: number
+          id?: string
+          item_name?: string
+          prediction?: string | null
+          previous_price?: number | null
+          savings_potential?: number | null
+          trend_direction?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          display_name: string | null
+          email: string | null
+          id: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          display_name?: string | null
+          email?: string | null
+          id?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          display_name?: string | null
+          email?: string | null
+          id?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      recommendations: {
+        Row: {
+          confidence: number | null
+          created_at: string
+          current_price: number | null
+          id: string
+          item_name: string
+          priority: string
+          reason: string
+          savings: number | null
+          suggested_price: number | null
+          type: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          confidence?: number | null
+          created_at?: string
+          current_price?: number | null
+          id?: string
+          item_name: string
+          priority?: string
+          reason: string
+          savings?: number | null
+          suggested_price?: number | null
+          type: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          confidence?: number | null
+          created_at?: string
+          current_price?: number | null
+          id?: string
+          item_name?: string
+          priority?: string
+          reason?: string
+          savings?: number | null
+          suggested_price?: number | null
+          type?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      shopping_list: {
+        Row: {
+          category: string | null
+          created_at: string
+          estimated_price: number | null
+          id: string
+          is_checked: boolean
+          name: string
+          notes: string | null
+          priority: string
+          quantity: number
+          unit: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          category?: string | null
+          created_at?: string
+          estimated_price?: number | null
+          id?: string
+          is_checked?: boolean
+          name: string
+          notes?: string | null
+          priority?: string
+          quantity?: number
+          unit?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          category?: string | null
+          created_at?: string
+          estimated_price?: number | null
+          id?: string
+          is_checked?: boolean
+          name?: string
+          notes?: string | null
+          priority?: string
+          quantity?: number
+          unit?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
